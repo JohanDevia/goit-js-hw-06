@@ -1,0 +1,11 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+}
+.gallery img {
+  width: 80%;
+  border: 15px solid rgba(7, 157, 160, 0.2);
+  border-radius: 45%;
+}
