@@ -14,8 +14,15 @@ const images = [
 ];
 
 const ul = document.querySelector(".gallery");
-let html = "";
-for (let i = 0; i < images.length; i++) {
-  html += `<li><img src = "${images[i].url}" alt="${images[i].alt}"/li>`;
-}
+// let html = "";
+// for (let i = 0; i < images.length; i++) {
+//   html += `<li><img src = "${images[i].url}" alt="${images[i].alt}"/li>`;
+// }
+// ul.insertAdjacentHTML("beforeend", html);
+// const ul = document.querySelector(".gallery");
+
+const html = images
+  .map((image) => `<li><img src="${image.url}" alt="${image.alt}"></li>`)
+  .join("");
+
 ul.insertAdjacentHTML("beforeend", html);
